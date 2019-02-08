@@ -1,0 +1,22 @@
+{
+  "name": "employeefinder",
+  "version": "1.0.0",
+  "description": "Compares Survey results to find Employee with the closest match",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jim-walker/EmployeeFinder.git"
+  },
+  "author": "Jim Walker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jim-walker/EmployeeFinder/issues"
+  },
+  "homepage": "https://github.com/jim-walker/EmployeeFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
