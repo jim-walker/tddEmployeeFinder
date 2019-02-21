@@ -1,12 +1,6 @@
 // Bring in employee Data
 const employees = require('../data/employee.js');
-
-function getSum(total, num) {
-    return parseInt(total) + parseInt(num);
-}
-function arrayReduction(array) {
-    return array.reduce(getSum);
-}
+const helper = require('../helper');
 
 // createing route handler module
 module.exports = function(app) {
@@ -19,7 +13,7 @@ module.exports = function(app) {
     // Here we take the result of the user's survey POST and parse it.
     const userData = req.body;
     // let surveySum = arrayReduction(req.body.scores);
-    let surveySum = arrayReduction(userData.scores);
+    let surveySum = helper.arrayReduction(userData.scores);
     // This variable will calculate the difference between the user's scores and the scores of
     // each user in the employees data
     let lowestDifference=100;
@@ -30,7 +24,7 @@ module.exports = function(app) {
     // Here we loop through all the employee possibilities in the employees data.
     for (let i = 0; i < employees.length; i++) {
         employeeSum = 0;
-        employeeSum = arrayReduction(employees[i].scores);
+        employeeSum = helper.arrayReduction(employees[i].scores);
         employeeRating =  Math.abs(parseInt(surveySum) - parseInt(employeeSum));
         if (employeeRating<=lowestDifference){
             lowestDifference=employeeRating;
