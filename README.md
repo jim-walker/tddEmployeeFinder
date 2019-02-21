@@ -9,3 +9,4 @@ Run Testing on Windows machine by running:
 Run Testing on Macs by running:
 npm test
 
+Application will be running on http://localhost:3000
