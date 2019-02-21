@@ -1,5 +1,5 @@
 # tddEmployeeFinder
-Unit Testing for Employee Finder.
+Unit Testing for Employee Finder application
 
 Once downlaoded, run npm install to get all needed modules.
 
